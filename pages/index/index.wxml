@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button bindtap="upload"> 上传图片 </button>
+  </view>
+  <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+            <image src="{{item }}" bindtap="listenerButtonPreviewImage" data-index="{{index}}" style="width: 100%;"/>
+  </block>
+</view>
